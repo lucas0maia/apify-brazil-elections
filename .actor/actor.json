@@ -1,0 +1,19 @@
+{
+  "actorSpecification": 1,
+  "name": "apify-brazil-elections",
+  "title": "Brazil Elections & Polling Data (TSE)",
+  "description": "Extract official Brazilian election results (Presidente, Governador, Municipal), candidate vote tallies & percentages, municipalities & zones, and geocoded polling stations directly from TSE open data.",
+  "version": "1.0",
+  "meta": {
+    "templateId": "python-start"
+  },
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "defaultMemoryMbytes": 512,
+  "usesStandbyMode": true
+}

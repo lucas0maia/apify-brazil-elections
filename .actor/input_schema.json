@@ -1,0 +1,79 @@
+{
+  "title": "Brazil Elections (TSE) Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Dataset Mode",
+      "type": "string",
+      "description": "Choose consolidated candidate results, active election catalog, municipalities/zones, or geocoded polling stations.",
+      "editor": "select",
+      "enum": [
+        "results",
+        "elections_catalog",
+        "municipalities",
+        "polling_stations"
+      ],
+      "default": "results"
+    },
+    "cycle": {
+      "title": "Election Cycle",
+      "type": "string",
+      "description": "TSE cycle slug (e.g. ele2026 or ele2024).",
+      "editor": "textfield",
+      "default": "ele2026"
+    },
+    "electionId": {
+      "title": "TSE Election ID (cd_eleicao)",
+      "type": "integer",
+      "description": "Official TSE election code (e.g. 6258 = 2026 President 2nd round, 6257 = 1st round, 6260 = 2026 Governor 2nd round).",
+      "default": 6258
+    },
+    "scope": {
+      "title": "Geographic Scope (br or UF)",
+      "type": "string",
+      "description": "Territory code: 'br' for Brazil total or 2-letter UF code (sp, rj, mg, al, pe, ba, df, etc.).",
+      "editor": "textfield",
+      "default": "br"
+    },
+    "officeCode": {
+      "title": "Office Code (cargo)",
+      "type": "integer",
+      "description": "1=Presidente, 3=Governador, 5=Senador, 6=Dep. Federal, 7=Dep. Estadual, 11=Prefeito, 13=Vereador.",
+      "default": 1
+    },
+    "municipalityCode": {
+      "title": "TSE Municipality Code (5 digits, optional)",
+      "type": "string",
+      "description": "Optional 5-digit TSE municipality code (e.g. 71072 for Sao Paulo, 27855 for Maceio).",
+      "editor": "textfield",
+      "default": ""
+    },
+    "query": {
+      "title": "Search Query (Candidate, Party, City, or School)",
+      "type": "string",
+      "description": "Optional case-insensitive filter across candidate names, party acronyms, municipalities, or polling stations.",
+      "editor": "textfield",
+      "default": ""
+    },
+    "maxResults": {
+      "title": "Max Results",
+      "type": "integer",
+      "description": "Maximum number of rows returned.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 5000
+    },
+    "timeoutSecs": {
+      "title": "Request Timeout (Seconds)",
+      "type": "integer",
+      "description": "HTTP timeout in seconds.",
+      "default": 30,
+      "minimum": 5,
+      "maximum": 120
+    }
+  },
+  "required": [
+    "mode"
+  ]
+}

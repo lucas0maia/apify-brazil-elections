@@ -1,0 +1,39 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Brazil Elections & Polling Records (TSE)",
+      "transformation": {
+        "fields": [
+          "recordType",
+          "cycle",
+          "electionId",
+          "scope",
+          "office",
+          "candidateOrEntity",
+          "partyOrCode",
+          "votesOrCount",
+          "votePct",
+          "status",
+          "sourceUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "recordType": { "label": "Mode", "format": "text" },
+          "cycle": { "label": "Cycle", "format": "text" },
+          "electionId": { "label": "Election", "format": "number" },
+          "scope": { "label": "UF / Scope", "format": "text" },
+          "office": { "label": "Office", "format": "text" },
+          "candidateOrEntity": { "label": "Candidate / Place", "format": "text" },
+          "partyOrCode": { "label": "Party / Code", "format": "text" },
+          "votesOrCount": { "label": "Votes / Voters", "format": "number" },
+          "votePct": { "label": "Share %", "format": "number" },
+          "status": { "label": "Status", "format": "text" },
+          "sourceUrl": { "label": "Official TSE Source", "format": "link" }
+        }
+      }
+    }
+  }
+}

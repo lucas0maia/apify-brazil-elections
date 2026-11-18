@@ -1,0 +1,11 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Brazil TSE Elections Output",
+  "properties": {
+    "dataset": {
+      "type": "string",
+      "title": "Brazil Elections Dataset",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
